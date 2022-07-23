@@ -1,0 +1,24 @@
+.rotate-btn {
+  cursor: pointer;
+}
+
+.rotate-btn.clique {
+  animation: rotateBTN 0.5s forwards;
+}
+
+@keyframes rotateBTN {
+  from {
+    -moz-transform: none;
+    -webkit-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  to {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

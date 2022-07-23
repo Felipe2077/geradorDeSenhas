@@ -1,0 +1,144 @@
+@import url(./modules/slider.css);
+@import url(./modules/checkbox.css);
+@import url(./modules/rotateBtn.css);
+@import url(./modules/passBanner.css);
+@import url(./global/global.css);
+@import url(./global/reset.css);
+
+header {
+  background-color: var(--cor-p1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  color: #ffffff;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.main-header p {
+  font-size: 1.2rem;
+}
+.container-senha {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px 20px;
+}
+.container-senha input {
+  height: 60px;
+  width: 100%;
+  font-size: 1.8rem;
+  border: none;
+}
+.container-senha input:focus {
+  outline: none;
+}
+.area-senha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.icons {
+  font-size: 2rem;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+#passColorBar {
+  transition: ease background 0.5s;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+#passColorBar.fraca {
+  background-color: #df6661;
+}
+#passColorBar.media {
+  background-color: #efc20f;
+}
+#passColorBar.forte {
+  background-color: #006b4d;
+}
+#copyPass {
+  padding: 10px 20px;
+  background-color: var(--cor-p1);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pass-settings {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #ffffff;
+  padding: 20px 20px;
+}
+.settings-header {
+  border-bottom: 2px solid #e8e8e8;
+  padding: 10px 0px;
+}
+.pass-settings h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 900;
+}
+.pass-setting-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.caracteresPass {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.control-checkbox {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .container-senha input {
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  .icons {
+    font-size: 1.5rem;
+    gap: 20px;
+  }
+  #copyPass {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .pass-setting-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  #passColorBar {
+    font-size: 0.8rem;
+  }
+}
