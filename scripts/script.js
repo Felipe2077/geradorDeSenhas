@@ -14,30 +14,23 @@ let checkBox = document.querySelectorAll(".pass-check input");
 let colorBar = document.getElementById("passColorBar");
 
 let getPassWord = () => {
+  const onlyNumbers =
+    !inputMaiuscula.checked && inputNumero.checked && !inputSimbolo.checked;
+  const onlyUpperCase =
+    inputMaiuscula.checked && !inputNumero.checked && !inputSimbolo.checked;
+
+  const onlySymbol =
+    !inputMaiuscula.checked && !inputNumero.checked && inputSimbolo.checked;
+
   let password = [];
-  if (inputMaiuscula.checked && !inputNumero.checked && !inputSimbolo.checked) {
-    //* apenas letra maiuscula
+
+  if (onlyUpperCase) {
     password = base.getLetraMinuscula().concat(base.getLetraMaiuscula());
-  } else if (
-    !inputMaiuscula.checked &&
-    inputNumero.checked &&
-    !inputSimbolo.checked
-  ) {
-    //* apenas numero
+  } else if (onlyNumbers) {
     password = base.getLetraMinuscula().concat(base.getNumbers());
-  } else if (
-    !inputMaiuscula.checked &&
-    !inputNumero.checked &&
-    inputSimbolo.checked
-  ) {
-    //* apenas simbolo
+  } else if (onlySymbol) {
     password = base.getLetraMinuscula().concat(base.getChar());
-  } else if (
-    inputMaiuscula.checked &&
-    inputNumero.checked &&
-    !inputSimbolo.checked
-  ) {
-    //* maiuscula e numero
+  } else if (onlyUpperCase && onlyNumbers && !onlySymbol) {
     password = base
       .getLetraMinuscula()
       .concat(base.getLetraMaiuscula(), base.getNumbers());
@@ -71,6 +64,7 @@ let getPassWord = () => {
   } else {
     password = base.getLetraMinuscula();
   }
+
   return password;
 };
 
