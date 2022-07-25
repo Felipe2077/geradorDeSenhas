@@ -5,10 +5,19 @@
   font-family: "Nunito", sans-serif;
 }
 
+a {
+  margin: 0px;
+  color: inherit;
+}
+
 body {
   background-color: #f9f9f9;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
 }
 .container {
   max-width: 1000px;

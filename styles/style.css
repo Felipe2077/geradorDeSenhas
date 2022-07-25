@@ -10,10 +10,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
+  padding: 10px 0px;
   color: #ffffff;
   flex-direction: column;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 main {
   display: flex;
@@ -25,7 +26,7 @@ main {
   justify-content: center;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   margin-bottom: 40px;
   text-align: center;
@@ -86,10 +87,10 @@ h1 {
   cursor: pointer;
 }
 .pass-settings {
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 10px;
   background-color: #ffffff;
   padding: 20px 20px;
 }
@@ -141,4 +142,26 @@ h1 {
   #passColorBar {
     font-size: 0.8rem;
   }
+}
+
+footer {
+  margin-top: 40px;
+  background-color: #e6e6e6;
+  margin: 0px;
+  display: flex;
+  padding: 6px;
+  justify-content: center;
+}
+
+.footer-text a {
+  color: var(--cor-p1);
+  font-weight: bold;
+}
+footer ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.footer-git {
+  font-size: 1.5rem;
 }
