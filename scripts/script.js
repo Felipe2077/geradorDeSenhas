@@ -13,12 +13,12 @@ let inputSimbolo = document.getElementById("simbolos");
 let checkBox = document.querySelectorAll(".pass-check input");
 let colorBar = document.getElementById("passColorBar");
 
+//* creating array for password
 let getPassWord = () => {
   const onlyNumbers =
     !inputMaiuscula.checked && inputNumero.checked && !inputSimbolo.checked;
   const onlyUpperCase =
     inputMaiuscula.checked && !inputNumero.checked && !inputSimbolo.checked;
-
   const onlySymbol =
     !inputMaiuscula.checked && !inputNumero.checked && inputSimbolo.checked;
 
@@ -30,7 +30,11 @@ let getPassWord = () => {
     password = base.getLetraMinuscula().concat(base.getNumbers());
   } else if (onlySymbol) {
     password = base.getLetraMinuscula().concat(base.getChar());
-  } else if (onlyUpperCase && onlyNumbers && !onlySymbol) {
+  } else if (
+    inputMaiuscula.checked &&
+    inputNumero.checked &&
+    !inputSimbolo.checked
+  ) {
     password = base
       .getLetraMinuscula()
       .concat(base.getLetraMaiuscula(), base.getNumbers());
