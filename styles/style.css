@@ -117,6 +117,29 @@ h1 {
 .control-checkbox {
   margin-top: 10px;
 }
+
+footer {
+  margin-top: 40px;
+  background-color: #e6e6e6;
+  margin: 0px;
+  display: flex;
+  padding: 6px;
+  justify-content: center;
+}
+
+.footer-text a {
+  color: var(--cor-p1);
+  font-weight: bold;
+}
+footer ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.footer-git {
+  font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .container-senha input {
     height: 50px;
@@ -142,26 +165,13 @@ h1 {
   #passColorBar {
     font-size: 0.8rem;
   }
-}
 
-footer {
-  margin-top: 40px;
-  background-color: #e6e6e6;
-  margin: 0px;
-  display: flex;
-  padding: 6px;
-  justify-content: center;
+  footer {
+    font-size: 1rem;
+  }
 }
-
-.footer-text a {
-  color: var(--cor-p1);
-  font-weight: bold;
-}
-footer ul {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.footer-git {
-  font-size: 1.5rem;
+@media (max-width: 500px) {
+  footer {
+    font-size: 0.8rem;
+  }
 }
