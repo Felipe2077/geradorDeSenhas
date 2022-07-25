@@ -122,9 +122,8 @@ checkBox.forEach((element) => {
 let bannerCopy = document.querySelector(".bannerContainer");
 
 function copyToClipBoard() {
-  passOutput.select();
+  // passOutput.select();
   navigator.clipboard.writeText(passOutput.textContent);
-  passOutput.select(false);
 }
 
 function generateBanner() {
