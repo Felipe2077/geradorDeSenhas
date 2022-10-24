@@ -46,7 +46,7 @@ let getPassWord = () => {
 
   //*Array para armazenar a combinação de senha
   let password = [];
-
+  //*
   //*condicional para criar o array com base na combinação selecionada
   if (onlyUpperCase) {
     password = base.getLetraMinuscula().concat(base.getLetraMaiuscula());
