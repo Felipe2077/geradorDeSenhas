@@ -5,7 +5,6 @@ import * as base from "./base.js";
  *2 passo: criar um novo array com a quantidade de caracteres selecionados no slider (esse novo array vai pegar caracteres aleatórios do primeiro array)
  *3 passo, colocar a senha gerada na tela.
  */
-
 //*variables
 let slider = document.getElementById("myRange");
 let output = document.getElementById("demo");
@@ -22,6 +21,7 @@ let inputSimbolo = document.getElementById("simbolos");
 //* variables froom checkbox
 let checkBox = document.querySelectorAll(".pass-check input");
 let colorBar = document.getElementById("passColorBar");
+let bannerCopy = document.querySelector(".bannerContainer");
 
 //* criando o array com base na combinação de caracteres escolhido
 let getPassWord = () => {
@@ -34,13 +34,10 @@ let getPassWord = () => {
     inputSimbolo.checked && !inputMaiuscula.checked && !inputNumero.checked;
   const numberAndUpper =
     inputMaiuscula.checked && inputNumero.checked && !inputSimbolo.checked;
-
   const numberAndSymbol =
     !inputMaiuscula.checked && inputNumero.checked && inputSimbolo.checked;
-
   const upperAndSymbol =
     inputMaiuscula.checked && !inputNumero.checked && inputSimbolo.checked;
-
   const allChar =
     inputMaiuscula.checked && inputNumero.checked && inputSimbolo.checked;
 
@@ -79,7 +76,7 @@ let getPassWord = () => {
 
 //* Functions
 function generatePass() {
-  novo = "";
+  novo = [];
   for (let i = 0; i < slider.value; i++) {
     const random = Math.floor(Math.random() * getPassWord().length);
     novo += getPassWord()[random];
@@ -115,14 +112,19 @@ function printPassOnScreen() {
     generatePass();
     generateColorBar(slider.value);
   };
-}
-checkBox.forEach((element) => {
-  element.addEventListener("click", () => {
-    generatePass();
+  checkBox.forEach((element) => {
+    element.addEventListener("click", () => {
+      generatePass();
+    });
   });
-});
-
-let bannerCopy = document.querySelector(".bannerContainer");
+  restartPass.addEventListener("click", generatePass);
+  restartPass.addEventListener("click", () => {
+    restartPass.classList.add("clique");
+    setTimeout(() => {
+      restartPass.classList.remove("clique");
+    }, 550);
+  });
+}
 
 function copyToClipBoard() {
   passOutput.select();
@@ -140,14 +142,6 @@ function generateBanner() {
 
 copyPass.addEventListener("click", copyToClipBoard);
 copyPass.addEventListener("click", generateBanner);
-
-restartPass.addEventListener("click", generatePass);
-restartPass.addEventListener("click", () => {
-  restartPass.classList.add("clique");
-  setTimeout(() => {
-    restartPass.classList.remove("clique");
-  }, 550);
-});
 
 generatePass();
 printPassOnScreen();
