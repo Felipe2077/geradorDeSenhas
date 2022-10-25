@@ -82,6 +82,7 @@ function generatePass() {
     novo += getPassWord()[random];
   }
   passOutput.setAttribute("value", (passOutput.innerHTML = novo));
+  console.log(novo);
 }
 
 function generateColorBar(slider) {
@@ -140,8 +141,11 @@ function generateBanner() {
   }, 1500);
 }
 
-copyPass.addEventListener("click", copyToClipBoard);
-copyPass.addEventListener("click", generateBanner);
+function clipboard() {
+  copyPass.addEventListener("click", copyToClipBoard);
+  copyPass.addEventListener("click", generateBanner);
+}
 
 generatePass();
 printPassOnScreen();
+clipboard();
