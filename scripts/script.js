@@ -26,6 +26,9 @@ function changeEvents() {
   slider.addEventListener("input", () => {
     const passSize = document.querySelector("#passSize");
     passSize.innerHTML = slider.value;
+    passwordScreen.value = generatePass();
+
+    //* function to change password Strength Bar
     passStrength.passStrengthBar(slider.value);
   });
   passSize.innerHTML = slider.value;
