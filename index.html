@@ -39,8 +39,8 @@
       </div>
       <div class="pass-setting-container">
         <div class="slidecontainer">
-          <p class="caracteresPass">Número de caracteres da senha (<span id="demo"></span>)</p>
-          <input type="range" min="6" max="50" value="15" class="slider" id="myRange">
+          <p class="caracteresPass">Número de caracteres da senha (<span id="passSize"></span>)</p>
+          <input type="range" min="8" max="50" value="16" class="slider" id="slider">
         </div>
         <div class="pass-check">
           <div class="control-group">
@@ -51,17 +51,17 @@
             </label>
             <label class="control control-checkbox">
               Letras Maiúsculas
-              <input type="checkbox" id="maisculas" checked>
+              <input class="inputPass" type="checkbox" id="upperCase" checked>
               <div class="control_indicator"></div>
             </label>
             <label class="control control-checkbox">
               Numeros
-              <input type="checkbox" id="numeros" checked>
+              <input class="inputPass" type="checkbox" id="numbers" checked>
               <div class="control_indicator"></div>
             </label>
             <label class="control control-checkbox">
               Símbolos
-              <input type="checkbox" id="simbolos" checked>
+              <input class="inputPass" type="checkbox" id="char" checked>
               <div class="control_indicator"></div>
             </label>
           </div>

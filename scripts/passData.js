@@ -3,7 +3,7 @@ export function getNumbers() {
   return numbers;
 }
 
-export function getLetraMinuscula() {
+export function getLetters() {
   const LetraMinuscula = [
     "a",
     "b",
@@ -35,7 +35,7 @@ export function getLetraMinuscula() {
   return LetraMinuscula;
 }
 
-export function getLetraMaiuscula() {
+export function getUpperCase() {
   let letraMaiuscula = [
     "A",
     "B",

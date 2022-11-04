@@ -2,6 +2,7 @@
 @import url(./modules/checkbox.css);
 @import url(./modules/rotateBtn.css);
 @import url(./modules/passBanner.css);
+@import url(./modules/passColorBar.css);
 @import url(./global/global.css);
 @import url(./global/reset.css);
 
@@ -60,22 +61,7 @@ h1 {
   gap: 20px;
   align-items: center;
 }
-#passColorBar {
-  transition: ease background 0.5s;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-}
-#passColorBar.fraca {
-  background-color: #df6661;
-}
-#passColorBar.media {
-  background-color: #efc20f;
-}
-#passColorBar.forte {
-  background-color: #006b4d;
-}
+
 #copyPass {
   padding: 10px 20px;
   background-color: var(--cor-p1);

@@ -1,0 +1,16 @@
+#passColorBar {
+  transition: ease background 0.5s;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+#passColorBar.fraca {
+  background-color: #df6661;
+}
+#passColorBar.media {
+  background-color: #efc20f;
+}
+#passColorBar.forte {
+  background-color: #006b4d;
+}
