@@ -39,7 +39,7 @@ export function passStrengthBar(sliderValue) {
     passColorBar.classList.remove(passStrengthData.passWordAverage.class);
     passColorBar.classList.add(passStrengthData.passWordStrong.class);
     passColorBar.textContent = passStrengthData.passWordStrong.passWordText;
-  } else if (sliderValue >= 16) {
+  } else {
     passColorBar.classList.remove(passStrengthData.passWordWeak.class);
     passColorBar.classList.remove(passStrengthData.passWordAverage.class);
     passColorBar.classList.add(passStrengthData.passWordStrong.class);
