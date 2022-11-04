@@ -1,4 +1,5 @@
 import * as password from "./passArrayGenerator.js";
+import * as passStrength from "./PassStrength.js";
 
 const slider = document.querySelector("#slider");
 const inputs = document.querySelectorAll(".inputPass");
@@ -25,7 +26,7 @@ function changeEvents() {
   slider.addEventListener("input", () => {
     const passSize = document.querySelector("#passSize");
     passSize.innerHTML = slider.value;
-    generatePass();
+    passStrength.passStrengthBar(slider.value);
   });
   passSize.innerHTML = slider.value;
   passwordScreen.value = generatePass();
